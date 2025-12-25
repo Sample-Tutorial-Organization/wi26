@@ -220,10 +220,8 @@ Package.realitycomposerpro text linguist-language=json
 *.heic                  lfs
 *.heif                  lfs
 
-# Unity specific
+# Unity LFS
 *.cubemap               lfs
-# NOTE: *.unitypackage is ignored by default in .gitignore.
-# LFS rule exists in case you need to track exported packages.
 *.unitypackage          lfs
 
 # =========================================================================
@@ -244,6 +242,7 @@ Package.realitycomposerpro text linguist-language=json
 
 # Compiled libraries
 *.dll                   lfs
+*.pdb                   lfs
 *.so                    lfs
 *.dylib                 lfs
 *.a                     lfs
@@ -254,12 +253,8 @@ Package.realitycomposerpro text linguist-language=json
 # If you need to track vendored frameworks, handle their internal binaries.
 
 # Executables and build outputs
-# NOTE: These are typically ignored in .gitignore. LFS rules exist here
-# in case you need to track them (remove from .gitignore first).
-*.aab                   lfs
 *.apk                   lfs
 *.exe                   lfs
-*.ipa                   lfs
 
 # iOS/visionOS specific
 *.car                   lfs
