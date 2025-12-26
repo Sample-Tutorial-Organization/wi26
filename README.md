@@ -1,10 +1,15 @@
 # XR Capstone Team Template
 
-Template for CSE 481 V repositories **[replace with a description of your project]**
+Template for CSE 481 V repositories 
+
+> [!IMPORTANT]
+> Replace with the title and  description of your project
 
 **Team:** 
 - Student 1 (email@uw.edu)
-- **[update with your team's info]**
+
+> [!IMPORTANT]
+> Update with your team's info
 
 In this repository:
 
