@@ -6,7 +6,7 @@ Template for CSE 481 V repositories
 > Replace with the title and  description of your project
 
 **Team:** 
-- Student 1 (email@uw.edu)
+- Another Student (hi@uw.edu)
 
 > [!IMPORTANT]
 > Update with your team's info
