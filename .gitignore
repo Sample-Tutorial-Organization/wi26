@@ -147,29 +147,23 @@ playground.xcworkspace
 # SECTION 3a: XCODE PROJECT HANDLING (CRITICAL)
 # =========================================================================
 # IMPORTANT: We must track xcodeproj and xcworkspace for visionOS projects.
-# Git tracks these by default. We only need to IGNORE user-specific contents.
+# This pattern ignores all xcodeproj contents first, then un-ignores essentials.
 
-# Ignore user-specific xcodeproj contents
-*.xcodeproj/xcuserdata/
-*.xcodeproj/project.xcworkspace/xcuserdata/
+# Ignore everything in xcodeproj by default
+*.xcodeproj/*
+# Un-ignore essential project files
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
 
-# These are tracked by default (no action needed):
-# - *.xcodeproj/project.pbxproj (project definition)
-# - *.xcodeproj/xcshareddata/ (shared schemes, breakpoints)
-
-# Ignore user-specific xcworkspace contents
-*.xcworkspace/xcuserdata/
-
-# These are tracked by default (no action needed):
-# - *.xcworkspace/contents.xcworkspacedata
-# - *.xcworkspace/xcshareddata/
+# Un-ignore xcworkspace essential file
+!*.xcworkspace/contents.xcworkspacedata
 
 # Coverage data (user-specific)
 /*.gcno
 
-# IMPORTANT: WorkspaceSettings.xcsettings in xcshareddata SHOULD be tracked
-# for team consistency (build system settings, etc.)
-# Do NOT ignore **/xcshareddata/WorkspaceSettings.xcsettings
+# WorkspaceSettings can contain user-specific build system preferences
+**/xcshareddata/WorkspaceSettings.xcsettings
 
 # =========================================================================
 # SECTION 3b: visionOS / RealityKit / Reality Composer Pro
@@ -662,12 +656,15 @@ FodyWeavers.xsd
 *.orig
 *.rej
 
+# Ltex files
+*ltex.json
+
 # =========================================================================
 # SECTION 10: BUILD OUTPUTS (General - path specific)
 # =========================================================================
 
 # macOS app bundles (build outputs)
-*.app/
+*.app
 
 # Note: build/ without anchor is intentionally omitted to avoid conflicts
 # Unity uses /[Bb]uild/ and /[Bb]uilds/ (anchored)
